@@ -1,3 +1,4 @@
+# vim: filetype=neomuttrc
 # gruvbox dark (contrast dark):
 
 # bg0    = 234
@@ -29,7 +30,7 @@ color attachment  color109 color234
 color bold        color229 color234
 color error       color167 color234
 color hdrdefault  color246 color234
-color indicator   color223 color237
+color indicator   brightcolor229 color61
 color markers     color243 color234
 color normal      color223 color234
 color quoted      color250 color234
@@ -48,14 +49,45 @@ color underline   color223 color239
 color sidebar_divider    color250 color234
 color sidebar_new        color142 color234
 
-color index color142 color234 ~N
-color index color108 color234 ~O
-color index color109 color234 ~P
-color index color214 color234 ~F
-color index color175 color234 ~Q
-color index color167 color234 ~=
-color index color234 color223 ~T
-color index color234 color167 ~D
+color index brightcolor142 color234 ~N
+color index color108       color234 ~O
+color index color109       color234 ~P
+color index color214       color234 ~F
+color index color175       color234 ~Q
+color index color167       color234 ~=
+color index color234       color223 ~T
+color index color234       color167 ~D
+
+# Default index colors:
+# color index default default '.*'
+# color index_author default default '.*'
+# color index_number default default
+# color index_subject default default '.*'
+
+# New mail is boldened:
+# color index brightcolor142 color234 "~N"
+# color index_author brightcolor142 color234 "~N"
+# color index_subject brightcolor142 color234 "~N"
+
+# Flagged mail
+# color index color214 color234 "~F"
+# color index_author color214 default "~F"
+# color index_subject color214 default "~F"
+
+# Deleted mail
+# color index color234 color167 "~D"
+# color index_author color234 color167 "~D"
+# color index_subject color234 color167 "~D"
+
+# Tagged mail is highlighted:
+# color index color234 color223 "~T"
+# color index_author color234 color223 "~T"
+# color index_subject color234 color223 "~T"
+
+# Other colors and aesthetic settings:
+# color sidebar_highlight underline default default
+# color sidebar_flagged default default
+# color message default default
 
 color header color214 color234 "^(To:|From:)"
 color header color142 color234 "^Subject:"
